@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 
 class Splash : Fragment() {
     override fun onCreateView(
@@ -12,6 +13,11 @@ class Splash : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_splash, container, false)
+
+        val view = inflater.inflate(R.layout.fragment_splash, container, false)
+
+        val loadingImage: ImageView = view.findViewById(R.id.loadingSplashScreen);
+        loadingImage.setImageResource(R.drawable.splashLoading)
+        return view;
     }
 }
